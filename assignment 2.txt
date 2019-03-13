@@ -1,0 +1,15 @@
+Assignment 2
+Difference between declaration,definition and initialization.
+Declaration -allocates memory and the definiton assigns a value to this allocated memory.
+
+example:var x=1
+x is being declared in the beginning while its definition comes at the line specified.
+
+
+Definition-to show how something is implemented.
+example:class function and variable
+
+Initialization- is the means of assigning an intial value to a variable.so undefined is the inital value of a declared variable.
+example:var a;="foo"
+
+
