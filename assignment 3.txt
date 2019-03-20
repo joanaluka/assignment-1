@@ -1,0 +1,32 @@
+Assignment 3
+
+1.Write a function that prints all the fruits from a given list of fruits e.g printfruits(fruits_list) 
+var fruits = ["grape","banana","orange","watermelon"];
+
+undefine.
+
+
+
+2.Write a function that given a fruit index, it returns the name of a fruit from a list of fruits. e.g getFruit
+(1, fruits_list), returns 'apples'
+fruits
+
+(4) ["grape", "banana", "orange", "watermelon"]
+0: "grape"
+1: "banana"
+2: "orange"
+3: "watermelon"
+length: 4
+_proto__: Array(0)
+
+fruits [0]
+
+"grape"
+
+fruits [1]
+
+"banana"
+
+fruits[2]
+
+"orange"
