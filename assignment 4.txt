@@ -1,0 +1,15 @@
+fruits={'apple':60,'grapes' :50,'oranges':30,}
+{apple: 60, grapes: 50, oranges: 30}
+var quantity=2
+undefined
+var price=fruits["oranges"]*quantity
+undefined
+price
+60
+function calculateFruitCost(specific,quantity) {
+fruits={'apple':60,'grapes':50,'orange':30};
+    console.log(quantity + ' ' + specific + 'for KES'+price);}
+undefined
+calculateFruitCost('orange' ,2);
+VM607:3 2 orangefor KES60
+undefined
