@@ -1,0 +1,105 @@
+ class Mkulima {
+  constructor() {
+    this.farms = [];
+    this.vendors = [];
+    this.products = [];
+    this.orders = [];
+  }
+ addFarm(farmId,name,farmer,phone, address){
+   let farm ={
+     farmId: farmId,
+     name: name,
+     farmer: farmer;
+     phone: phone;
+     address: address;
+   }
+
+    getFarm(farmId){
+   for(var i=0;i<this.farms.length;i++){
+  let farm=this.farms[i];
+     if(farm.farmId===farmId){
+       return farm
+     }
+ }
+}
+ removeFarm(farmId){
+    let farm=this.getFarm(farmId)
+    let index=this.farms.indexOf(farm);
+    this.farms.splice(index,1)
+}
+  updateFarm(farmId, name, farmer, phone, address){
+    let farm={
+    farmId:farmId,
+    name:name,
+    farmer:farmer,
+    phone:phone,
+    address:address
+    }
+   this.farms.push(farm)
+  
+    
+   }
+  addVendor(vendorId, name, phone){
+    let vendor={
+      vendorId:vendorId,
+      name:name,
+      phone:phone
+    }
+    this.vendors.push(vendor)
+    }
+   getVendor(vendorId){
+     for(var i=0;i<this.vendor.length;i++){
+     let vendor=this.vendor[i];
+     if(vendor.vendorId===vendorId){
+       return vendor
+     }
+ }
+}
+  removeVendor(vendorId){
+    let vendor=this.getVendor(vendorId)
+    let index=this.vendor.indexOf(vendor);
+    this.vendors.splice(index,1)
+  }
+  updateVendor(vendorId,name,phone){
+    let vendor={
+      vendorId:vendorId,
+      name:name,
+      phone:phone
+    }
+    this.vendors.push(vendor)
+    
+    
+  }
+  addProduct(productId, name, price){
+    let product={
+      productId:productId,
+      name:name,
+      phone:price
+    }
+    this.products.push(product)
+}
+   removeProduct(productId){
+    let product=this.getFarm(productId)
+    let index=this.product.indexOf(product);
+    this.product.splice(index,1)
+}
+  updateProduct(productId,name,price){
+    let product={
+      productId:productId,
+      name:name,
+      phone:price
+    }
+    this.products.push(product)
+    
+  } 
+}
+
+ 
+var mkulima1=new Mkulima();
+mkulima1.addFarm(chocolate factory,"choco","joanne","0718149079","carlifornia")
+console.log(mkulima1.farms)
+mkulima1.updateFarm(mwea,"mwea","marline","0700921843","los angeles")
+console.log(mkulima1.farms)
+var product=new Mkulima();
+product.addProduct(veges,"sukuma wiiki","200",)
+console.log(product.products)
