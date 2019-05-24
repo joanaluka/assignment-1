@@ -1,105 +1,112 @@
- class Mkulima {
+class Mkulima {
   constructor() {
     this.farms = [];
     this.vendors = [];
     this.products = [];
     this.orders = [];
-  }
- addFarm(farmId,name,farmer,phone, address){
-   let farm ={
-     farmId: farmId,
-     name: name,
-     farmer: farmer;
-     phone: phone;
-     address: address;
-   }
 
-    getFarm(farmId){
-   for(var i=0;i<this.farms.length;i++){
-  let farm=this.farms[i];
-     if(farm.farmId===farmId){
-       return farm
-     }
- }
-}
- removeFarm(farmId){
-    let farm=this.getFarm(farmId)
-    let index=this.farms.indexOf(farm);
-    this.farms.splice(index,1)
-}
-  updateFarm(farmId, name, farmer, phone, address){
-    let farm={
-    farmId:farmId,
-    name:name,
-    farmer:farmer,
-    phone:phone,
-    address:address
-    }
-   this.farms.push(farm)
+  }
   
-    
-   }
-  addVendor(vendorId, name, phone){
-    let vendor={
-      vendorId:vendorId,
-      name:name,
-      phone:phone
-    }
-    this.vendors.push(vendor)
-    }
-   getVendor(vendorId){
-     for(var i=0;i<this.vendor.length;i++){
-     let vendor=this.vendor[i];
-     if(vendor.vendorId===vendorId){
-       return vendor
-     }
+ addFarm(farmId, name, farmer, phone, address) {
+   let farm = {farmId:farmId, name:name, phone:phone, address:address};
+   this.farms.push(farm);
  }
-}
-  removeVendor(vendorId){
-    let vendor=this.getVendor(vendorId)
-    let index=this.vendor.indexOf(vendor);
-    this.vendors.splice(index,1)
+  
+ getFarm(farmId) {
+   for (var i=0; i<this.farms.length; i++) {
+     let farm = this.farms[i];
+     if (farm.farmId = farmId) {
+       return farm;
+     }
   }
-  updateVendor(vendorId,name,phone){
-    let vendor={
-      vendorId:vendorId,
-      name:name,
-      phone:phone
-    }
-    this.vendors.push(vendor)
+}
+  
+  removeFarm(farmId) {
+   let farm = this.getFarm(farmId);
+   let Index = this.farms.indexOf(farm);
+   this.farms.splice(Index, 1); 
     
+ }
+  
+  updateFarm(farmId, name, farmer, phone, address) {
+   let farm = this.getFarm(farmId);
+   let Index = this.farms.indexOf(farm);
+   this.farms[Index] = {farmId:farmId, name:name, farmer:farmer, phone:phone, address:address}
     
   }
-  addProduct(productId, name, price){
-    let product={
-      productId:productId,
-      name:name,
-      phone:price
+  
+  addVendor(vendorId, name, phone) {
+    let vendor = {vendorId:vendorId, name:name, phone:phone};
+    this.vendors.push(vendor); 
+  }
+
+  getVendor(vendorId) {
+    for (var i=0; i<this.vendors.length; i++) {
+      let vendor = this.vendors[i];
+      if (vendor.vendorId = vendorId) {
+        return vendor;
+      }
     }
-    this.products.push(product)
-}
-   removeProduct(productId){
-    let product=this.getFarm(productId)
-    let index=this.product.indexOf(product);
-    this.product.splice(index,1)
-}
-  updateProduct(productId,name,price){
-    let product={
-      productId:productId,
-      name:name,
-      phone:price
-    }
-    this.products.push(product)
+  }
+  removeVendor(vendorId) {
+    let vendor = this.getVendor(vendorId);
+    let Index = this.vendors.indexOf(vendor);
+    this.vendors.splice(Index, 567);
+ }
+   updateVendor( vendorId, name, phone) {
+   let vendor = this.getVendor(vendorId);
+   let Index = this.vendors.indexOf(vendor);
+   this.farms[Index] = {vendorId:vendorId, name:name, phone:phone,}
     
-  } 
+  }
+  addProduct(productId, name, price) {
+    let product = {productId:productId, name:name, price:price};
+    this.products.push(product);
+  }
+  
+  getProduct(productId) {
+    for (var i=0; i<this.products.length; i++) {
+      let product = this.products[i];
+      if (product.product.Id = productId) {
+        return product;
+      }
+    }
+  }
+  
+  removeProduct(productId) {
+    let product = this.getProduct(productId);
+    let Index = this.products.indexOf(product);
+    this.products.splice(Index, 245);
+  }
+  
+  updateProduct( productId, name, price) {
+   let product = this.getProduct(productId);
+   let myIndex = this.products.indexOf(product);
+   this.products[myIndex] = {productId:productId, name:name, price:price}
+  }
+  
 }
 
+let mkulima = new Mkulima();
+ mkulima.addFarm(1, "JUICE", "JOAN", 0718149079, "P.O. BOX 224442");
+ mkulima.addFarm(2, "Kericho Gold", "WATERSOAP", 7833663, "P.O BOX 0000");
+ console.log(mkulima.getFarm(1));
+ console.log(mkulima.farms);
+
+ mkulima.removeFarm(2);
+console.log(mkulima.farms);
  
-var mkulima1=new Mkulima();
-mkulima1.addFarm(chocolate factory,"choco","joanne","0718149079","carlifornia")
-console.log(mkulima1.farms)
-mkulima1.updateFarm(mwea,"mwea","marline","0700921843","los angeles")
-console.log(mkulima1.farms)
-var product=new Mkulima();
-product.addProduct(veges,"sukuma wiiki","200",)
-console.log(product.products)
+mkulima.addVendor(101, "JOAN", 874674764);
+mkulima.addVendor(102, "CHILLI", 6748304949); 
+console.log(mkulima.getVendor(23));
+console.log(mkulima.vendors);
+
+mkulima.removeVendor(102);
+console.log(mkulima.vendors);
+
+mkulima.addProduct(1, "WATER", "70");
+mkulima.addProduct(4, "CORROTS", "60");
+console.log(mkulima.getProduct(1001));
+console.log(mkulima.products);
+mkulima.removeProduct(1002);
+console.log(mkulima.products); 
