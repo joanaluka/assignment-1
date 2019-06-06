@@ -1,0 +1,95 @@
+Questions: 
+1.Change document background color to silver 
+2.Change the font color for h1 title tag to green
+3.Change the font case for h3 title tags to uppercase
+4.Add one more fruit to the fruits list
+5.Add one more vegetable to the vegetables list
+
+solution
+var body = document.body
+body.style.backgroundColor = "silver"
+ var h1 = document.getElementById("title")
+ h1.style.color="green"
+ 
+ 
+ 
+ var h1 = document.getElementById("title")
+h1.innerHTML =h1.innerhtml.toUpperCase()
+
+var vegetables=getElementById("veg")
+veg.innerHTML =veg.innerHTML.toUpperCase()
+
+
+var body = document.createElement("body")
+body.innerHtml="apple"
+
+var heading=document.createElement("heading")
+heading.appendChild(body)
+
+
+var paragraph= document.createElement("paragraph")
+paragraph.innerHtml="grapes"
+
+ASYNC/AWAIT
+Async:
+
+-Async function is a modification to the syntax used in writing promises.
+according to my understanding its  a promise and a request
+
+Asynx has two aspects:
+
+a.Makes it always return a promise.
+b.Allows to use await in it.
+
+ eg: async function f(){
+	return 1;
+     }
+f().then (alert);
+
+The promise format: eg  
+function myBook(){
+  return Promise.resolve('Trevor Noah');
+}
+
+
+-Async before a function means a function always returns a promise
+-When a promise is rejected, an async function is represented:eg
+ function myTest(){
+   return Promise.reject(25);
+   }
+async function (){
+   throw 25;
+}
+
+
+Await:
+-Makes JavaScript wait until that promise settles and returns its result.
+- it also Works only inside async function.
+
+
+
+eg:
+async function(){
+  let promise = new promise ((resolve,reject)=>{
+       setTime(()=>resolve("done"!),(1000)
+    });
+
+let result = await promise;
+alert(result);
+ }
+f()
+
+
+
+-async/await works well with Promise.all
+To wait for multiple promises, we can wrap them in Promise.all and then await:
+
+// wait for the array of results
+let results = await Promise.all([
+  fetch(url1),
+  fetch(url2),
+  
+]);
+
+
+
