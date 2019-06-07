@@ -48,17 +48,17 @@ f().then (alert);
 
 The promise format: eg  
 function myName(){
-  return Promise.resolve('Joan aluka');
+  return Promise.resolve('Joan Aluka');
 }
 
 
 -Async before a function means a function always returns a promise
 -When a promise is rejected, an async function is represented:eg
- function myTest(){
-   return Promise.reject(25);
+ function mySubject(){
+   return Promise.reject(html);
    }
 async function (){
-   throw 20;
+   throw html;
 }
 
 
@@ -71,7 +71,7 @@ Await:
 eg:
 async function(){
   let promise = new promise ((resolve,reject)=>{
-       setTime(()=>resolve("done"!),(1000)
+       setTime(()=>resolve("wow"!),(1000)
     });
 
 let result = await promise;
@@ -83,13 +83,5 @@ f()
 
 -async/await works well with Promise.all
 To wait for multiple promises, we can wrap them in Promise.all and then await:
-
-// wait for the array of results
-let results = await Promise.all([
-  fetch(url1),
-  fetch(url2),
-  
-]);
-
 
 
