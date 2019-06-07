@@ -47,8 +47,8 @@ b.Allows to use await in it.
 f().then (alert);
 
 The promise format: eg  
-function myBook(){
-  return Promise.resolve('Trevor Noah');
+function myName(){
+  return Promise.resolve('Joan aluka');
 }
 
 
@@ -58,7 +58,7 @@ function myBook(){
    return Promise.reject(25);
    }
 async function (){
-   throw 25;
+   throw 20;
 }
 
 
