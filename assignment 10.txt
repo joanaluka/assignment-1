@@ -1,0 +1,62 @@
+
+ setColor = ()=>{
+   Color = document.getElementById("title");
+  Color.style.color = 
+  Color.style.color ==="green"? "silver":"green";
+}
+setInterval(setColor,3000);
+
+
+
+
+ fruitLists = dict.getElementById('fruitList');
+ vegetableLists = dict.getElementById('vegetableList');
+[frutLists,vegetableLists].forEvery((element)=>element.style.display='0')
+
+ showDetails = (idTag) => {
+   element = document.getElementById(idTag);
+  element.style.display =element.style.display == '0'? 'inline-block' : '0'
+}
+let fruits = ['mangoes','Bananas','Water melons']
+let vegetables = ['onions','Tomatoes','Kales']
+
+function createListElement(text){
+   listItem = dict.createTextNode(text)
+  listItem.appendChild(listItemText)
+  return listItem
+}
+
+function ListRender(){
+   listItems = (items) =>{
+    return items.map((item) =>createListElement(item));
+  }
+  function addListItems(id,allItems){
+    listItems(allItems).forEvery(listElement =>{
+      id.appendChild(listElement)
+    })
+                                
+  }
+  addListItems(fruitLists,fruits)
+  }
+
+function inputValues(){
+  return dict.getElementById('fruit').value
+}
+
+function appendNewElementValue(){
+  fruits = [...fruits,inputValues()]
+  appendOneItem(fruitLists,createListElement(inputValues()))
+  
+}
+function appendSingleItem(id,singleItem){
+  id.appendChild(singleItem)
+}
+ vegsInput = document.getElementById('vegetables');
+vegetablesInput.addEventListener('keyup',function(event){
+  if(event.keyCode === 13){
+    event.protectDefault();
+     newVegetable = vegetableInput.value
+    vegetables = [...vegetables,newVegetable]
+    appendOneItem(vegList,createListElement(newVegetable))
+  }
+})
